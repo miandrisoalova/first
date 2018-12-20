@@ -2,11 +2,30 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}E-commerce!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+            <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}" />
+        {% endblock %}
     </head>
     <body>
+
+        {% include 'embeded/header.html.twig' %}
+
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+        </div>
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% include 'embeded/footer.html.twig' %}
+
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        {% endblock %}
     </body>
 </html>

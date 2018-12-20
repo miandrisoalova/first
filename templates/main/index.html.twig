@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur, beatae consectetur dolores eius ex excepturi, facilis fugit labore necessitatibus nesciunt non officiis quia quod reiciendis sapiente similique. Illo, incidunt!</p>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Shop 1</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Promotion</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Shop 1</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Promotion</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Shop 1</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Promotion</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
