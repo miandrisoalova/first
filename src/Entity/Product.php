@@ -31,7 +31,7 @@ class Product
     /**
      * @ORM\Column(type="boolean")
      */
-    private $available;
+    private $available = 0;
 
     /**
      * @ORM\Column(type="float")
@@ -42,7 +42,7 @@ class Product
      * @ORM\ManyToOne(targetEntity="App\Entity\Category")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $catgory;
+    private $category;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Store")
@@ -56,7 +56,7 @@ class Product
     private $image;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\VAT", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity="App\Entity\VAT")
      * @ORM\JoinColumn(nullable=false)
      */
     private $vat;
@@ -119,14 +119,14 @@ class Product
         return $this;
     }
 
-    public function getCatgory(): ?Category
+    public function getCategory(): ?Category
     {
-        return $this->catgory;
+        return $this->category;
     }
 
-    public function setCatgory(?Category $catgory): self
+    public function setCategory(?Category $category): self
     {
-        $this->catgory = $catgory;
+        $this->category = $category;
 
         return $this;
     }
@@ -174,7 +174,7 @@ class Product
         return $this->vat;
     }
 
-    public function setVat(VAT $vat): self
+    public function setVat(?VAT $vat): self
     {
         $this->vat = $vat;
 

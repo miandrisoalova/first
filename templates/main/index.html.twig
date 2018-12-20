@@ -13,30 +13,17 @@
     </div>
 
     <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Shop 1</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Promotion</small></p>
+
+        {% for store in stores %}
+            <div class="card">
+                <img class="card-img-top" src="{{ store.images[0].path }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ store.name }}</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam, doloribus illo mollitia non optio vel? Animi commodi dicta dignissimos eligendi, iusto molestiae nulla provident quia quisquam rem, temporibus velit.</p>
+                    <p class="card-text"><small class="text-muted">Promotion</small></p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Shop 1</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Promotion</small></p>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="{{ asset('img/holder.png') }}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Shop 1</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Promotion</small></p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 
